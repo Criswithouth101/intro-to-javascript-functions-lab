@@ -123,7 +123,10 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip
+function calculateTip(bill,percentage) {
+  const tip = bill * (percentage / 100);
+  return tip;
+}
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 /*
@@ -140,9 +143,17 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-
-
+function convertTemperature(temperature,scale) {
+if (scale === "C") {
+  const convertFarenheit = (temperature * 1.8 + 32)+"F";
+return convertFarenheit;
+} else {
+  const convertCelsius = ((temperature - 32) / 1.8)+"C";
+return convertCelsius;
+}
+}
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+
 /*
 Exercise 9: basicCalculator()
 
@@ -159,8 +170,18 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
+function basicCalculator(num1,num2,operation) {
+  if (operation === "add") {
+    return (num1+num2);
+  } else if (operation === "subtract") {
+    return (num1-num2);
+  } else if (operation === "multiply") {
+  return (num1*num2);
+  }  else if (operation === "divide") {
+  return (num1/num2);
+} 
+}
 
-
-console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "add"));
 
   
